@@ -1,0 +1,429 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.5),#009688),url(images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.logo{
+    width: 10%;
+    margin: 40px;
+    padding: 30px;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+.banner-text{
+    margin: auto;
+    text-align: center;
+    margin-top: 5px;
+    color: #fff;
+}
+.banner-text h1{
+    font-size: 180px;
+    font-family: 'Kaushan Script', cursive;
+}
+.banner-text p{
+    font-size: 30px;
+    font-style: italic;
+}
+.banner-btn{
+    padding: 20px;
+    font-size: 28px;
+    font-weight: 200;
+    margin-top: 30px;
+}
+.banner-text .banner-btn a{
+    margin-right: 40px;
+    margin-left: 50px;
+    text-decoration: none;
+    color:white;
+    display: inline-block;
+    border: 1px solid lightpink;
+    padding: 10px 30px ;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+ .banner-btn a span{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:#fff ;
+    z-index: -1;
+    transition: 1s;
+}
+.banner-btn a:hover span{
+    width: 100%;
+}
+.banner-btn a:hover{
+    color:black;
+}
+#sideNav{
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top:0;
+    background: #009688;
+    z-index: 2;
+    transition: 1s;
+}
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 20px;
+}
+#menuBtn{
+    width: 50px;
+    height: 50px;
+    background: #009688;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+#menuBtn img{
+    width: 20px;
+    margin-top: 15px;
+}
+/* -----------small screen for header---------*/
+@media screen and (max-width:770px){
+    .logo{
+        width: 30%;
+        margin-right: 10px;
+        transform:translate(-150px,-50px);
+    }
+    .banner-text{
+        margin-top: 20px;
+    }
+    .banner-text h1{
+        font-size: 40px;
+    }
+    .banner-text p{
+        font-size: 21px;
+    }
+    .banner-btn a{
+      margin: 10px auto;
+      display: block;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+}
+/*-----------feature-----------*/
+.feature{
+    padding:70px 0 ;
+    width: 100%;
+}
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.title-text p{
+   margin: auto;
+   font-size: 20px;
+   color:#009688;
+   font-weight: bold;
+   display: inline-block;
+   position: relative;
+   z-index: 1;
+}
+.title-text p::after{
+    content: "";
+    width:40px ;
+    height:35px ;
+    background: linear-gradient(#019587,#fff);
+    left: 0;
+    top: -20px;
+    z-index: -1;
+    position: absolute;
+    transform: rotate(10deg);
+    border-top-left-radius:  35px; 
+    border-bottom-right-radius: 35px;
+}
+.title-text h1{
+    font-size: 50px;
+}
+.feature-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10%;
+}
+.features{
+    flex-basis: 50%;
+    margin-top: 100px;
+}
+.features h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: #009688;
+    margin-bottom: 10px;
+}
+.features-img{
+    flex-basis: 60%;
+    margin: auto;
+}
+.features-img img{
+    width: 60%;
+    height: 40%;
+    margin-left: 20%;
+    border-radius: 10px;
+    margin-top: 120px;
+}
+.features-desc{
+    display:flex ;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+.feature-icon .fa{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    margin-top: 6px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: #009688;
+    border: 1px solid #009688;
+}
+.feature-text p{
+    font-weight:700;
+    padding: 0 20px;
+    text-align: initial;
+}
+/*---------small screen for features----------*/
+@media screen and (max-width:770px){
+    .title-text h1{
+        font-size: 35px;
+        margin-bottom: -23%;
+    }
+    .features{
+        flex-basis: 100%;
+    }
+    .features-img{
+        flex-basis: 100%;
+    }
+    .features-img img{
+       width: 80%;
+       margin-top: 20px;
+       margin-left: 30px;
+    }
+
+}
+/*--------------services--------------*/
+.service{
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+  }
+  .service-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+  }
+  .single-service{
+      flex-basis: 48%;
+      text-align:center;
+      margin-bottom: 20px;
+      position: relative;
+  }
+  .single-service img{
+      border-radius: 7px;
+      width: 100%;
+  }
+  .overlay{
+      width: 100%;
+      height: 99%;
+      position:absolute;
+      border-radius: 7px;
+      cursor: pointer;
+      top: 0;
+      background:linear-gradient(rgba(0,0,0,0.5),#009688) ;
+      opacity: 0;
+      transition: 1s;
+  }
+  .single-service:hover .overlay{
+       opacity: 1;
+  }
+  .service-desc{
+      width: 80%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: 1s;
+  }
+  .service-desc h3{
+      color: #fff;
+  }
+  .service-desc p{
+      color: #fff;
+      font-size: 14px;
+  }
+  hr{
+      background:#fff ;
+      height: 1px;
+      border: 0;
+      margin: 15px auto;
+      width:50%;
+  }
+  .single-service:hover .service-desc{
+      bottom: 30%;
+      opacity: 1;
+  }
+/*------------small screen for services----------------*/
+@media screen and (max-width:770px){
+    .single-service{
+        flex-basis: 100%;
+        margin-top: 40px;
+    }
+    .service-desc p{
+        color: #fff;
+        font-size: 12px;
+    }
+    hr{
+        margin: 5px auto;
+    }
+}
+/*----------------testemonials-----------------------*/
+.testemonil{
+    padding: 70px 0;
+    width: 100%;
+}
+.testemonial-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.testemonial-column{
+    flex-basis: 28%;
+    padding: 10px;
+    box-shadow: 0  10px  20px  3px  #00968814;
+    border-radius: 7px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testemonial-column p{
+    font-size: 14px;
+}
+.user{
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+}
+.user img{
+    width: 40px;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+.user-info .fa{
+   margin-left: 10px;
+   color: #27c0ff;
+   font-size: 20px;
+}
+.user-info small{
+    color: #009688;
+    font-size: 20px;
+}
+.testemonial-column:hover{
+    transform: translateY(-7px);
+}
+/*--------------small screen for testemonials-----------*/
+@media screen and (max-width:770px){
+    .testemonial-column{
+        flex-basis: 100%;
+    }
+}
+/*----------------footer----------------------*/
+.footer{
+    padding: 100px  0  20px;
+    background: #efefef;
+    position: relative;
+}
+.footer-row{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-left , .footer-right{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.footer-right{
+    text-align: right;
+}
+.footer-row h1{
+    margin: 10px 0;
+}
+.footer-row p{
+    line-height: 35px;
+    font-weight: 500;
+}
+.footer-left .fa, .footer-right .fa{
+    font-size: 20px;
+    color: #009688;
+    margin: 10px;
+}
+.footer-img{
+    max-width: 370px;
+    opacity: 0.1;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+}
+.social-links{
+    text-align: center;
+    margin: auto;
+    color: #009688;
+
+}
+.social-links .fa{
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid #009688;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.social-links .fa:hover{
+    background:#009688 ;
+    color: #fff;
+    transform: translateY(-7px);
+}
+/*-------------small screen for footer--------------*/
+@media screen and (max-width:770px){
+    .footer-left , .footer-right{
+        flex-basis: 100%;
+        font: size 14px; 
+    }
+    .footer-img{
+        top: 25%;
+    }
+}
